@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>PRIS Game!</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link rel="shortcut icon" href="assets/img/goodalakazam.jpeg" >
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+		<link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+		<link href="dist/css/skins/skin-purple.min.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+        	body
+        	{
+        		background-image: url(./assets/img/schematics2013.png);
+        		background-repeat: repeat;
+        	}
+        </style>
+	</head>
+	<body class="skin-purple layout-top-nav">
+    	<div class="wrapper" >
+    		<header class="main-header">               
+        		<nav class="navbar navbar-static-top">
+          			<div class="container">
+            			<div class="navbar-header">
+              				<a href="index.html" class="navbar-brand" style="color: white"><b>PRIS</b>&nbsp;Game</a>
+              				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                				<i class="fa fa-bars"></i>
+              				</button>
+            			</div>
+            			<div class="collapse navbar-collapse pull-right" id="navbar-collapse">
+              				<ul class="nav navbar-nav">
+                				<li class="active">
+                					<a href="story.html">Story <span class="sr-only">(current)</span></a>
+                				</li>
+                				<li>
+                					<a href="guide.html">How To Play</a>
+                				</li>
+                				<li>
+                					<a href="about.html">About</a>
+                				</li>
+              				</ul>                                    				
+            			</div>
+            		</div>
+            	</nav>
+            </header>
+        </div>
+        <div class="content-wrapper" style="background-image: url(./assets/img/schematics2013.png); background-repeat: repeat;">
+	        <div class="container">
+	          	<section class="content">
+	            	<div class="row">
+	            		<div class="col-md-1"></div>
+	            		<div class="col-md-10">
+	            			<div class="box box-primary box-solid">
+	            				<div class="box-header with-border bg-purple">
+                  					<h2 class="page-header">How To Play PRIS Game</h2>
+				                </div>
+				                <div class="box-body">
+				                	<p>
+                                        <ul>
+                                            <li>There will be two gardens in Berryland. One for you, another one for Cipio.</li>
+                                            <li>Initially, there will be <i>n</i> baskets of purpleberries in each garden.</li>
+                                            <li>Each basket contains different amount of purpleberries.</li>
+                                            <li>The basket numbered from 1 to <i>n</i>.</li>
+                                            <li>Here is the order of the baskets:<br/>1,2,3,4,5,6,7,8,9,10,11,12<br/>13,14,15,etc.</li>
+                                            <li>There will be two players who move independently.</li>
+                                            <li>The order and the number of purpleberries are identical for both players.</li>
+                                            <li>There will be a certain capacity of bucket. Both players have the same bucket's capacity.</li>
+                                            <li>Player will take all purpleberries in certain baskets.</li>
+                                            <li>If player takes purpleberries in basket <i>i</i>, player will not be allowed to take purpleberries in basket <i>i+1</i>.</li>
+                                            <li>Player can't go back to all previous baskets of the current basket.</li>
+                                            <li>The basket whose color is red means you take purpleberries in that basket.</li>
+                                            <li>The basket whose color is green means Cipio takes purpleberries in that basket.</li>
+                                            <li>The basket whose color is orange means you and Cipio take purpleberries in that basket.</li>
+                                            <li>The basket whose color is purple means no one takes purpleberries in that basket.</li>
+                                            <li>The winner is the one who collects more purpleberries.</li>
+                                        </ul>               
+                                    </p>
+                                    <p>
+                                        Example:<br/>
+                                        Let <i>n</i> be 3 and capacity be 10. Remember, each player has his/her own garden. We use only one garden in this example to minimize the page. But, always keep on your mind that each player has his/her own garden.<br/>
+                                        <div class="col-md-12">
+                                            <table class="table">
+                                                <tr>
+                                                    <th>Purpleberries</th>
+                                                    <th>Your move</th>
+                                                    <th>Cipio's move</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block disabled bg-purple">
+                                                                3
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block disabled bg-purple">
+                                                                4
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block disabled bg-purple">
+                                                                5
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                    <td>Thinking</td>
+                                                    <td>Thinking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block bg-red">
+                                                                3
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block disabled bg-purple">
+                                                                4
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block bg-red">
+                                                                5
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                    <td>1, 3</td>
+                                                    <td>Thinking</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block bg-red">
+                                                                3
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block bg-green">
+                                                                4
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button class="btn btn-block bg-orange">
+                                                                5
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                    <td>1, 3</td>
+                                                    <td>2, 3</td>
+                                                </tr>
+                                            </table>
+                                            <p>You collect 8 purpleberries and Cipio collects 9 purpleberries. Hence, Cipio wins.</p>
+                                        </div>
+                                    </p>
+				                </div>
+				                <div class="box-footer">
+				                	<a href="game.html" class="btn btn-primary btn-block bg-purple">Let's Play!</a>
+				                </div>
+	            			</div>
+	            		</div>
+	            		<div class="col-md-1"></div>
+	            	</div>
+	          	</section>
+	        </div>
+	    </div>
+	    <footer class="main-footer">
+        	<center>
+                <strong>Created by <a href="https://id.linkedin.com/in/saputraindra" target="_blank">Indra Saputra</a></strong>
+            </center>
+      	</footer>
+      
+    	<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    	<script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+	    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	    <script src="dist/js/app.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+			});
+		</script>
+	</body>
+</html>
